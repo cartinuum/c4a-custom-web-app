@@ -1,0 +1,137 @@
+/*
+ * Cartinuum-inspired accents on top of Calcite shell / navigation surfaces.
+ * See https://developers.arcgis.com/calcite-design-system/components/
+ */
+:root {
+  --cu-navy: #042f38;
+  --cu-teal: #107286;
+  --cu-accent: #f06823;
+}
+
+html,
+body,
+calcite-shell#shell {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Header slot wrapper */
+.demo-header-stack {
+  flex: 0 0 auto;
+  display: block;
+  border-bottom: 3px solid var(--cu-accent);
+  box-shadow: 0 2px 12px rgba(4, 47, 56, 0.12);
+}
+
+.demo-header-stack calcite-navigation {
+  --calcite-navigation-background-color: var(--cu-navy);
+  --calcite-navigation-border-color: color-mix(in srgb, var(--cu-accent) 35%, transparent);
+}
+
+.demo-header-stack calcite-chip {
+  --calcite-chip-text-color: #fff;
+  --calcite-chip-border-color: color-mix(in srgb, #fff 40%, transparent);
+  --calcite-chip-background-color: color-mix(in srgb, var(--cu-accent) 55%, var(--cu-navy));
+}
+
+.demo-header-stack calcite-navigation-logo {
+  --calcite-navigation-logo-heading-text-color: #ffffff;
+  --calcite-navigation-logo-text-color: color-mix(in srgb, #ffffff 82%, transparent);
+}
+
+.demo-nav-brand {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding-inline-start: var(--calcite-spacing-sm, 1.25rem);
+  padding-inline-end: var(--calcite-spacing-md, 0.75rem);
+  box-sizing: border-box;
+}
+
+.demo-nav-brand calcite-navigation-logo {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.demo-chip-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: stretch;
+  padding-inline-start: var(--calcite-spacing-md, 0.75rem);
+  padding-inline-end: var(--calcite-spacing-xxl, 1.25rem);
+}
+
+.app-shell-map {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+}
+
+calcite-shell#shell {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell-map arcgis-map {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Connect popup: SA2 working population table */
+.connect-sa2-meta {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.connect-sa2-record-heading {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.connect-sa2-working-pop-wrap .connect-sa2-record-heading:first-child {
+  margin-top: 0;
+}
+
+.connect-sa2-working-pop-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+.connect-sa2-working-pop-table th,
+.connect-sa2-working-pop-table td {
+  border: 1px solid color-mix(in srgb, var(--calcite-color-border-3, #d4d4d4) 90%, transparent);
+  padding: 0.35rem 0.5rem;
+  text-align: right;
+}
+
+.connect-sa2-working-pop-table th:first-child,
+.connect-sa2-working-pop-table td:first-child {
+  text-align: left;
+}
+
+.connect-sa2-working-pop-table thead th {
+  background: color-mix(in srgb, var(--calcite-color-foreground-2, #f3f3f3) 90%, transparent);
+  font-weight: 600;
+  white-space: normal;
+}
+
+.connect-sa2-working-pop-table tbody th {
+  font-weight: 600;
+  background: color-mix(in srgb, var(--calcite-color-foreground-2, #f3f3f3) 45%, transparent);
+}
+
+.connect-sa2-working-pop-table tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--calcite-color-foreground-2, #f8f8f8) 60%, transparent);
+}
+

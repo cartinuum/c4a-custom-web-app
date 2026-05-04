@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width"
+    />
+    <title>WebMap + Connect Layer Links</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <calcite-shell id="shell">
+      <div slot="header" class="demo-header-stack">
+        <calcite-navigation label="Demonstration banner">
+          <div slot="logo" class="demo-nav-brand">
+            <calcite-navigation-logo
+              heading="Cartinuum"
+              heading-level="1"
+              description="Connect for ArcGIS · Interactive Web Map with Connect layer-link enrichment"
+              icon="map"
+            ></calcite-navigation-logo>
+          </div>
+          <div slot="content-end" class="demo-chip-wrap">
+            <calcite-chip
+              kind="neutral"
+              appearance="outline-fill"
+              scale="s"
+              label="Demonstration mode"
+            >
+              Demo
+            </calcite-chip>
+          </div>
+        </calcite-navigation>
+
+        <calcite-notice open kind="info" scale="s" appearance="outline-fill" icon width="full">
+          <span slot="message">
+            Anonymous Web Map viewer powered by ArcGIS Maps SDK&nbsp;for JavaScript (v5). Select a map feature to
+            open linked records from configured business integrations.
+          </span>
+        </calcite-notice>
+      </div>
+
+      <div class="app-shell-map">
+        <arcgis-map id="view"></arcgis-map>
+      </div>
+    </calcite-shell>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
